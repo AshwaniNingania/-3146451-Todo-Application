@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo Application</title>
+    <link type="text/css" rel="stylesheet" href="/styles.css">
+</head>
+<body bgcolor="black">
+
+    <fieldset>
+        <form>
+
+            <div class="form_header_div"> <h2>My Todos</h2></div>
+
+            <br>
+            <div class="todos_list_label">
+               <b> Active Todos</b>
+            </div>
+
+            <div id="todos_list_div">
+
+            </div>
+
+            <hr>
+
+            <div class="add_new_todo"> Add Todo <br>
+                <input type="text" id="new_todo_input" placeholder="Todo title goes here">
+                <input type="button" value="Add Todo Element" onclick="addTodoAJAX()">
+            </div>
+
+            <hr>
+            <div class="todos_list_label">
+                <b>Completed Todos</b>
+                <a href="" onclick="hideCompletedItems();"  >Hide Completed Items</a>
+            </div>
+            <div id="todos_complete_list__div">
+
+            </div>
+
+            <hr>
+            <div class="todos_list_label">
+                <b> Deleted Todos</b>
+                <a href="" onclick="hideDeletedItems();" id="hide_deleted_button">Hide Deleted Items</a>
+            </div>
+
+            <div id="todos_deleted_list__div">
+
+            </div>
+
+            <script src="script.js" type="text/javascript"></script>
+        </form>
+    </fieldset>
+
+</body>
+</html>

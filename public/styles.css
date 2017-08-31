@@ -1,0 +1,84 @@
+fieldset {
+    background-color: white;
+    display: table;
+    padding: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    width: auto;
+
+ }
+
+
+.breathVertical {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+
+.breathHorizontal {
+    margin-left:5px;
+    background-color: white;
+    background:none;
+    border-color: white;
+    border-style: none;
+    color: red;
+    outline: none;
+}
+
+
+div.todoStatusACTIVE {
+    color : black;
+}
+
+div.todoStatusCOMPLETE {
+        color : green;
+    text-decoration: line-through;
+}
+
+div.todoStatusDELETED {
+    color : red;
+    text-decoration: line-through;
+}
+
+div.form_header_div {
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+    padding: 5px;
+}
+
+div.todos_list_label {
+    margin-left: 10%;
+}
+
+#todos_list_div {
+    margin-left: 20%;
+    padding: 10px;
+}
+
+#todos_complete_list__div {
+    margin-left: 20%;
+    padding: 10px;
+
+}
+
+#todos_deleted_list__div {
+    margin-left: 20%;
+    padding: 10px;
+}
+
+div.add_new_todo {
+    padding-left: 10px;
+    text-decoration-color: lightgrey;
+    text-decoration: lightgrey;
+}
+
+hr {
+    border-width: 2px;
+    color: black;
+}
+
+a {
+    float: right;
+    margin-right: 30px;
+}
