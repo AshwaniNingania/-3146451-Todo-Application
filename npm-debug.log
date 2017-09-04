@@ -1,0 +1,34 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\node_js\\node-v6.11.2-win-x64\\node.exe',
+1 verbose cli   'C:\\node_js\\node-v6.11.2-win-x64\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.2
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle todolistapp@1.0.0~prestart: todolistapp@1.0.0
+6 silly lifecycle todolistapp@1.0.0~prestart: no script for prestart, continuing
+7 info lifecycle todolistapp@1.0.0~start: todolistapp@1.0.0
+8 verbose lifecycle todolistapp@1.0.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle todolistapp@1.0.0~start: PATH: C:\node_js\node-v6.11.2-win-x64\node_modules\npm\bin\node-gyp-bin;C:\Users\ashwani01\WebstormProjects\Todo-List-App-3146451\node_modules\.bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\TortoiseSVN\bin;C:\Users\ashwani01\AppData\Local\Microsoft\WindowsApps;C:\node_js\node-v6.11.2-win-x64;C:\Users\ashwani01\AppData\Local\Programs\Git\cmd
+10 verbose lifecycle todolistapp@1.0.0~start: CWD: C:\Users\ashwani01\WebstormProjects\Todo-List-App-3146451
+11 silly lifecycle todolistapp@1.0.0~start: Args: [ '/d /s /c', 'nodemon index.js' ]
+12 verbose stack Error: kill ENOSYS
+12 verbose stack     at exports._errnoException (util.js:1020:11)
+12 verbose stack     at process.kill (internal/process.js:190:13)
+12 verbose stack     at process.listener (C:\node_js\node-v6.11.2-win-x64\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+12 verbose stack     at emitNone (events.js:86:13)
+12 verbose stack     at process.emit (events.js:185:7)
+12 verbose stack     at processEmit (C:\node_js\node-v6.11.2-win-x64\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at Signal.wrap.onsignal (internal/process.js:217:44)
+13 verbose cwd C:\Users\ashwani01\WebstormProjects\Todo-List-App-3146451
+14 error Windows_NT 10.0.14393
+15 error argv "C:\\node_js\\node-v6.11.2-win-x64\\node.exe" "C:\\node_js\\node-v6.11.2-win-x64\\node_modules\\npm\\bin\\npm-cli.js" "start"
+16 error node v6.11.2
+17 error npm  v3.10.10
+18 error code ENOSYS
+19 error errno ENOSYS
+20 error syscall kill
+21 error kill ENOSYS
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]
