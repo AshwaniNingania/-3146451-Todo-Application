@@ -10,10 +10,13 @@ app.use("/", function (req,res,next) {
 app.use("/",express.static(__dirname+"/public"));
 app.use("/",body_parser.urlencoded({extended:false}));
 
-app.get("/api/todos", function (req,res) {              // get all todo
+app.get("/api/todos", function (req,res) {                       // get all todo
     res.json(todo_db.todos);
 });
-app.delete("/api/todos/:id", function (req,res) {
+app.get("/api/todos/hide", function (req,res) {                 // for hide the todo
+    res.send();
+});
+app.delete("/api/todos/:id", function (req,res) {              // for delete the todo
 
     var del_id = req.params.id;
     var todo = todo_db.todos[del_id];
@@ -27,7 +30,7 @@ app.delete("/api/todos/:id", function (req,res) {
     }
 
 });
-app.post("/api/todos", function (req,res) {
+app.post("/api/todos", function (req,res) {                      //for adding a new todo
 
     var todo = req.body.todo_title;
     if(!todo || todo == "" || todo.trim() == "") {
@@ -43,7 +46,7 @@ app.post("/api/todos", function (req,res) {
         res.json(todo_db.todos);
     }
 });
-app.put("/api/todos/:id", function (req,res) {
+app.put("/api/todos/:id", function (req,res) {                  // for get a particular todo
 
     var mod_id = req.params.id;
     var todo = todo_db.todos[mod_id];
@@ -71,7 +74,7 @@ app.put("/api/todos/:id", function (req,res) {
     }
 
 });
-app.put("/api/todos/complete/:id", function (req,res) {
+app.put("/api/todos/complete/:id", function (req,res) {                         // for complete a todo
     var mod_id = req.params.id;
     var todo = todo_db.todos[mod_id];
 
@@ -87,7 +90,7 @@ app.put("/api/todos/complete/:id", function (req,res) {
     }
 
 });
-app.put("/api/todos/active/:id", function (req,res) {
+app.put("/api/todos/active/:id", function (req,res) {               // for active a todo
     var mod_id = req.params.id;
     var todo = todo_db.todos[mod_id];
 
@@ -103,7 +106,7 @@ app.put("/api/todos/active/:id", function (req,res) {
     }
 
 });
-app.get("/api/todos/active", function (req,res) {
+app.get("/api/todos/active", function (req,res) {               // get all active todos
     var db = {};
     for(var i in todo_db.todos)
     {
@@ -114,7 +117,7 @@ app.get("/api/todos/active", function (req,res) {
     }
     res.send(db);
 });
-app.get("/api/todos/complete", function (req,res) {
+app.get("/api/todos/complete", function (req,res) {             // get all oompleted todos
     var db = {};
     for(var i in todo_db.todos)
     {
@@ -126,7 +129,7 @@ app.get("/api/todos/complete", function (req,res) {
     res.send(db);
 
 });
-app.get("/api/todos/deleted", function (req,res) {
+app.get("/api/todos/deleted", function (req,res) {              // get all deleted todos
     var db = {};
     for(var i in todo_db.todos)
     {
@@ -138,4 +141,4 @@ app.get("/api/todos/deleted", function (req,res) {
     res.send(db);
 });
 
-app.listen(3000);
+app.listen(4000);

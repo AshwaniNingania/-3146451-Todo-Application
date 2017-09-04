@@ -78,7 +78,26 @@ hr {
     color: black;
 }
 
-a {
+#hide_completed_todos {
     float: right;
     margin-right: 30px;
+    color: blue;
+}
+
+#hide_deleted_todos {
+    float: right;
+    margin-right: 30px;
+    color: blue;
+}
+
+#add {
+    background-color: lightskyblue;
+    padding-left: 20px;
+    padding-bottom: 7px;
+    padding-right: 20px;
+    padding-top: 7px;
+    border-style: none;
+}
+input[type="checkbox"] {
+    color: blue;
 }

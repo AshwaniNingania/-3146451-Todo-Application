@@ -6,11 +6,12 @@ const TODO_LIST_ID = "todos_list_div";
 const TODO_COMPLETED_LIST_ID = "todos_complete_list__div";
 const TODO_DELETED_LIST_ID = "todos_deleted_list__div";
 const NEW_TODO_INPUT = "new_todo_input";
-
+const COMPLETED_TODO_HIDE_ID = "hide_completed_todos";
+const DELETED_TODO_HIDE_ID = "hide_deleted_todos";
 
 document.onload = getTodosAJAX();
 
-function addTodoElements(todos_data_json) {
+function addTodoElements(todos_data_json) {             // add all todos
 
     var todos = JSON.parse(todos_data_json);
     var parentActive = document.getElementById(TODO_LIST_ID);
@@ -40,7 +41,7 @@ function addTodoElements(todos_data_json) {
     }
 }
 
-function createTodoElement(id,todo_object) {
+function createTodoElement(id,todo_object) {                // create a new todo here
 
     var todo_element = document.createElement("div");
 
@@ -67,6 +68,7 @@ function createTodoElement(id,todo_object) {
         complete_button.setAttribute("onclick","activeTodoAJAX("+id+")");
         complete_button.setAttribute("type","checkbox");
         complete_button.setAttribute("name","complete");
+        complete_button.setAttribute("checked","true");
         complete_button.setAttribute("class","breathHorizontal");
         todo_element.appendChild(complete_button);
         var label = document.createElement("label");
@@ -184,12 +186,31 @@ function addTodoAJAX() {
     xhr.send(data);
 }
 
-function hideCompletedItems() {
+function hideCompletedItems() {                                 // for hiding the completed todos
+    var hide = document.getElementById(COMPLETED_TODO_HIDE_ID);
 
-   document.getElementById(TODO_COMPLETED_LIST_ID).style.visibility = "hidden";
-
+    if(hide.innerHTML == "<u>Hide Completed Items</u>") {
+        document.getElementById(TODO_COMPLETED_LIST_ID).style.visibility = "hidden";
+        hide.innerHTML = "<u>Show Completed Items</u>";
+    }
+    else if(hide.innerHTML == "<u>Show Completed Items</u>")
+    {
+        hide.innerHTML = "<u>Hide Completed Items</u>";
+        document.getElementById(TODO_COMPLETED_LIST_ID).style.visibility = "visible";
+    }
 }
 
 function hideDeletedItems() {
+    var hide = document.getElementById(DELETED_TODO_HIDE_ID);
+
+    if(hide.innerHTML == "<u>Hide Deleted Items</u>") {
+        document.getElementById(TODO_DELETED_LIST_ID).style.visibility = "hidden";
+        hide.innerHTML = "<u>Show Deleted Items</u>";
+    }
+    else if(hide.innerHTML == "<u>Show Deleted Items</u>")
+    {
+        hide.innerHTML = "<u>Hide Deleted Items</u>";
+        document.getElementById(TODO_DELETED_LIST_ID).style.visibility = "visible";
+    }
 
 }
